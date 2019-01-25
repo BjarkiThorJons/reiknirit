@@ -1,7 +1,7 @@
 # Bjarki Þór Jónsson
 
 """
-1.
+1. Sauðakóði er lýsing á forriti eða algrím um hvernig það virkar og hvað það gerir.
 
 
 
