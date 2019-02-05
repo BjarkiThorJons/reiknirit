@@ -20,12 +20,20 @@ def strengur(n,s="",t = 0):
     if n > 0:
         for x in range(t,len(listi)):
             if n == 1:
-                print(s+listi[x])
                 listinn.append(s+listi[x])
             t+=1
             strengur(n-1,s+listi[x],t)
 
 strengur(3)
+print(len(listinn))
+'''
+a.
+   26!
+_________
+(26-n)!*n!
+b.
+
+'''
 # 5
 sys.setrecursionlimit(15000)
 listinn.reverse()
