@@ -35,6 +35,7 @@ a.
 _________
 (26-n)!*n!
 b.
+O(2^n)
 
 '''
 # 5
@@ -65,6 +66,10 @@ def quicksort(l,low,high):
 quicksort(listinn,0,len(listinn)-1)
 print(listinn)
 '''
+5
+	a.
+	b. O(n2)
+
 runtime fyrir forrit í lið 4
 1:
 fjöldi strengja: 26
