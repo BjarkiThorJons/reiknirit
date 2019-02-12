@@ -1,5 +1,5 @@
 # Bjarki Þór Jónsson
-
+from random import *
 # 2
 listi = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 listinn = []
@@ -33,10 +33,12 @@ print(binary_search(listi,2,0,len(listi)))
 
 # 5
 def rada(l,t):
+    if len(l) == 0 or l[-1]<t:
+        l.append(t)
+        return True
     for x in range(len(l)):
         if t >= l[x] and t <=l[x+1]:
             l.insert(x+1,t)
-            break
-    return l
-listi = rada(listi,4)
+            return True
+rada(listi,8)
 print(listi)
