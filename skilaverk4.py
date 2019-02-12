@@ -36,6 +36,9 @@ def rada(l,t):
     if len(l) == 0 or l[-1]<t:
         l.append(t)
         return True
+    elif t<l[0]:
+        l.insert(0,t)
+        return True
     for x in range(len(l)):
         if t >= l[x] and t <=l[x+1]:
             l.insert(x+1,t)
