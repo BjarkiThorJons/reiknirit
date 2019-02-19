@@ -11,8 +11,7 @@ c) O(n + k) er flækjustig fallsins ok k er bilið á milli minsta og stærsta s
 
 print("Dæmi 2")
 # 2
-listi = [1, 2, 3, 4, 5, 6, 7, 9]
-
+listi = [1, 2, 3, 4, 6, 7, 9]
 def linear_search(l,t):
     for x in range(len(l)):
         if t == l[x]:
@@ -23,7 +22,7 @@ print(linear_search(listi,9))
 print("Dæmi 3:")
 # 3
 def binary_search(l,t,low,high):
-    if low<=high:
+    if low<=high and t<=high:
         mid = (high+low)//2
         if t == l[mid]:
             return mid
@@ -34,7 +33,7 @@ def binary_search(l,t,low,high):
     else:
         return -1
 
-print(binary_search(listi,9,0,len(listi)))
+print(binary_search(listi,5,0,len(listi)))
 
 print('''
 Dæmi 4:
