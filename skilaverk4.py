@@ -11,8 +11,7 @@ c) O(n + k) er flækjustig fallsins ok k er bilið á milli minsta og stærsta s
 
 print("Dæmi 2")
 # 2
-listi = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-listinn = []
+listi = [1, 2, 3, 4, 5, 6, 7, 9]
 
 def linear_search(l,t):
     for x in range(len(l)):
@@ -20,11 +19,11 @@ def linear_search(l,t):
             return(x)
     return -1
 
-print(linear_search(listi,6))
+print(linear_search(listi,9))
 print("Dæmi 3:")
 # 3
 def binary_search(l,t,low,high):
-    if low<high:
+    if low<=high:
         mid = (high+low)//2
         if t == l[mid]:
             return mid
@@ -35,7 +34,7 @@ def binary_search(l,t,low,high):
     else:
         return -1
 
-print(binary_search(listi,2,0,len(listi)))
+print(binary_search(listi,9,0,len(listi)))
 
 print('''
 Dæmi 4:
@@ -55,11 +54,11 @@ def rada(l,t):
         if t >= l[x] and t <=l[x+1]:
             l.insert(x+1,t)
             return True
-# rada(listi,8)
-# print(listi)
+rada(listi,11)
+print(listi)
 
 #4
-
+print("Dæmi 6:")
 class Node:
     def __init__(self,v):
         self.value = v
