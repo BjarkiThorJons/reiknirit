@@ -51,6 +51,7 @@ class DLL: # DLL = Dobule Linked List
         s.nxt = self.head
         self.head.prv = s
         self.head = s
+        return True
     # Bætir við aftast á listann -> kallar á endurkvæmnt fall í Node.  Fallið er þegar útfært í Node klasa
     def append(self, d):
         if self.head:
