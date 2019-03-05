@@ -1,3 +1,4 @@
+#Bjarki Þór Jónsson
 import math
 class Node:
     def __init__(self, d):
