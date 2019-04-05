@@ -5,8 +5,7 @@ listi = f.read().split("\n")
 l = {}
 for x in range(len(listi)):
    listi[x] = listi[x].split(" ")
-t = 1
-def path(listi,ts,ls,t):
+def path(listi,ts,ls):
     key = str(ts)+","+str(ls)
     if key in k:
         return list(k[key].keys())[0]
@@ -16,8 +15,8 @@ def path(listi,ts,ls,t):
         #print(k)
         return gildi
     else:
-        s1 = path(listi,ts,ls+1,t)
-        s2 = path(listi,ts+1,ls+1,t)
+        s1 = path(listi,ts,ls+1)
+        s2 = path(listi,ts+1,ls+1)
         gildi = int(listi[ls][ts]) + max(s1,s2)
         if s1 >s2:
             k[key] = {gildi:listi[ls][ts]+","+k[str(ts)+","+str(ls+1)][s1]}
@@ -28,7 +27,7 @@ def path(listi,ts,ls,t):
 
 
 
-s = path(listi,0,0,t)
+s = path(listi,0,0)
 #print(s)
 summa = 0
 for x in k.values():
