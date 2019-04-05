@@ -41,6 +41,11 @@ class Node:
                 self.left.delete(d)
             if self.right:
                 self.right.delete(d)
+    def minnode(self):
+        if self.left == None:
+            return self
+        else:
+            self.left.minnode()
 
 class Tree:
     def __init__(self):
